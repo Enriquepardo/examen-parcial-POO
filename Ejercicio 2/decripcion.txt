@@ -1,0 +1,8 @@
+Las relaciones entre los diferentes objetos son de herencia.
+Por ejemplo, la clase Pollo hereda los atributos y metodos de las clases Animal y Ovíparo.
+
+El diagrama de clases también permite representar clases abstractas,
+que son aquellas que no pueden existir en la realidad pero que son útiles conceptualmente.
+En este caso la clase abstracta que se representa es Animal porque no hay ningún objeto que sea solo un animal
+sin pertenecer a alguna especie concreta.
+
