@@ -3,7 +3,7 @@ import datetime
 
 
 class Cuentabancaria:
-    def __init__(self,ID, nombre_titular, fecha_apertura, numero_cuenta, saldo):
+    def __init__(self,ID, nombre_titular, fecha_apertura,numero_cuenta, saldo):
         self.ID = ID
         self.nombre_titular = nombre_titular
         self.fecha_apertura = fecha_apertura
@@ -82,4 +82,12 @@ ingresar 575 € y retirar dinero 78 €.
 
 '''
 
-cuenta_1 = Cuentabancaria(99999, "Juan", datetime.date(2019, 1, 1), 123456789012, 10000)
+cuenta_1 = Cuentabancaria(1, "Juan", datetime.date(2019, 1, 1), 123456789012, 10000)
+cuenta_plazo_fijo = CuentaPlazoFijo(2, "Pedro", datetime.date(2019, 1, 1), 123456789012, 10000, datetime.date(2020, 1, 1))
+cuenta_vip = CuentaVip(3, "Maria", datetime.date(2019, 1, 1), 123456789012, 10000, 1000)
+
+cuenta_1.transferir_dinero(cuenta_plazo_fijo, 2000)
+cuenta_1.transferir_dinero(cuenta_vip, 2000)
+
+cuenta_1.ingresar_dinero(575)
+cuenta_1.retirar_dinero(78)
